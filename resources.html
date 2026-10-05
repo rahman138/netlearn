@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Further reading on computer networking and a contact form for NetLearn.">
+  <title>Resources &amp; Contact – NetLearn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Net<span>Learn</span></a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="topics.html">Topics</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="resources.html" aria-current="page">Resources &amp; Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>Resources &amp; Contact</h1>
+
+    <section aria-labelledby="res-title">
+      <h2 id="res-title">Further Reading</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>CompTIA Network+</h3>
+          <p>Official certification page with exam objectives.</p>
+          <a class="more" href="https://www.comptia.org/certifications/network" target="_blank" rel="noopener noreferrer">Visit CompTIA<span class="sr-only"> (opens in new tab)</span> ↗</a>
+        </article>
+        <article class="card">
+          <h3>Cisco Networking Academy</h3>
+          <p>Free introductory networking courses.</p>
+          <a class="more" href="https://www.netacad.com/" target="_blank" rel="noopener noreferrer">Visit NetAcad<span class="sr-only"> (opens in new tab)</span> ↗</a>
+        </article>
+        <article class="card">
+          <h3>Cloudflare Learning Center</h3>
+          <p>Clear explainers on how the internet works.</p>
+          <a class="more" href="https://www.cloudflare.com/learning/" target="_blank" rel="noopener noreferrer">Visit Cloudflare<span class="sr-only"> (opens in new tab)</span> ↗</a>
+        </article>
+        <article class="card">
+          <h3>Professor Messer</h3>
+          <p>Free video training for Network+ and Security+.</p>
+          <a class="more" href="https://www.professormesser.com/" target="_blank" rel="noopener noreferrer">Visit Professor Messer<span class="sr-only"> (opens in new tab)</span> ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>Questions, feedback, or topic suggestions? Send a message.</p>
+      <form action="mailto:rahman.bamgbose@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option>General question</option>
+          <option>Feedback</option>
+          <option>Topic suggestion</option>
+          <option>Report a broken link</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <p><button class="btn" type="submit">Send Message</button></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>NetLearn · Capstone Project 2026 · Created by Rahman Bamgbose</p>
+  </footer>
+  
+</body>
+</html>

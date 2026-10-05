@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NetLearn is a beginner-friendly computer networking resource hub covering IP addressing, the OSI model, network hardware, and network security basics.">
+  <title>NetLearn – A Computer Networking Resource Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Net<span>Learn</span></a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="topics.html">Topics</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="resources.html">Resources &amp; Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">Computer networking, made simple.</h1>
+        <p><strong>By Rahman Bamgbose</strong> · Capstone Project</p>
+        <p class="lead">Short, plain-language lessons on IP addressing, the OSI model, network hardware, and security. Built for students and beginners preparing for exams like CompTIA Network+.</p>
+        <p>
+          <a class="btn" href="topics.html">Start Learning</a>
+          <a class="btn secondary" href="glossary.html">Browse the Glossary</a>
+        </p>
+      </div>
+      <svg viewBox="0 0 400 260" role="img" aria-labelledby="hero-svg-title hero-svg-desc">
+        <title id="hero-svg-title">Simple network diagram</title>
+        <desc id="hero-svg-desc">A laptop, a phone, and a desktop computer each connected to a central switch, which connects to a router and then the internet cloud.</desc>
+        <g stroke="#5aa9ff" stroke-width="3" fill="none">
+          <line x1="70" y1="50" x2="200" y2="130"/>
+          <line x1="70" y1="210" x2="200" y2="130"/>
+          <line x1="40" y1="130" x2="200" y2="130"/>
+          <line x1="200" y1="130" x2="310" y2="130"/>
+          <line x1="310" y1="130" x2="360" y2="130" stroke="#38e0b0"/>
+        </g>
+        <rect x="165" y="110" width="70" height="40" rx="8" fill="#1a2540" stroke="#38e0b0" stroke-width="3"/>
+        <text x="200" y="135" text-anchor="middle" fill="#e8eefb" font-size="14" font-weight="700">Switch</text>
+        <rect x="275" y="110" width="70" height="40" rx="8" fill="#1a2540" stroke="#5aa9ff" stroke-width="3"/>
+        <text x="310" y="135" text-anchor="middle" fill="#e8eefb" font-size="14" font-weight="700">Router</text>
+        <circle cx="370" cy="130" r="22" fill="#0f2a2a" stroke="#38e0b0" stroke-width="3"/>
+        <text x="370" y="135" text-anchor="middle" fill="#e8eefb" font-size="11" font-weight="700">Web</text>
+        <rect x="30" y="30" width="80" height="40" rx="8" fill="#131c2e" stroke="#b3c0da" stroke-width="2"/>
+        <text x="70" y="55" text-anchor="middle" fill="#e8eefb" font-size="13">Laptop</text>
+        <rect x="30" y="190" width="80" height="40" rx="8" fill="#131c2e" stroke="#b3c0da" stroke-width="2"/>
+        <text x="70" y="215" text-anchor="middle" fill="#e8eefb" font-size="13">Phone</text>
+        <rect x="0" y="112" width="60" height="36" rx="8" fill="#131c2e" stroke="#b3c0da" stroke-width="2"/>
+        <text x="30" y="135" text-anchor="middle" fill="#e8eefb" font-size="13">PC</text>
+      </svg>
+    </section>
+
+    <section aria-labelledby="about-title">
+      <h2 id="about-title">What is NetLearn?</h2>
+      <p>NetLearn organizes complex networking topics into short, digestible articles with diagrams and real-world examples. Whether you're taking your first networking class or setting up a home network, you'll find clear explanations without heavy jargon.</p>
+    </section>
+
+    <section aria-labelledby="topics-title">
+      <h2 id="topics-title">Explore the Topics</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>IP Addressing</h3>
+          <p>How devices get addresses, what IPv4 and IPv6 look like, and how subnets divide a network.</p>
+          <a class="more" href="topics.html#ip-addressing">Read more<span class="sr-only"> about IP addressing</span> →</a>
+        </article>
+        <article class="card">
+          <h3>The OSI Model</h3>
+          <p>The seven layers that describe how data travels from an app on one device to an app on another.</p>
+          <a class="more" href="topics.html#osi-model">Read more<span class="sr-only"> about the OSI model</span> →</a>
+        </article>
+        <article class="card">
+          <h3>Network Hardware</h3>
+          <p>What routers, switches, and access points do, and how they differ.</p>
+          <a class="more" href="topics.html#hardware">Read more<span class="sr-only"> about network hardware</span> →</a>
+        </article>
+        <article class="card">
+          <h3>Network Security</h3>
+          <p>Firewalls, encryption, and the habits that keep a network safe.</p>
+          <a class="more" href="topics.html#security">Read more<span class="sr-only"> about network security</span> →</a>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="who-title">
+      <h2 id="who-title">Who It's For</h2>
+      <p><strong>Students and IT beginners</strong> studying for entry-level certifications such as CompTIA Network+ or taking a first networking course, and <strong>home-network hobbyists</strong> who want plain-language answers.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>NetLearn · Capstone Project 2026 · Created by Rahman Bamgbose</p>
+  </footer>
+  
+</body>
+</html>

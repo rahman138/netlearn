@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plain-language definitions of key computer networking terms.">
+  <title>Glossary – NetLearn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Net<span>Learn</span></a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="topics.html">Topics</a></li>
+          <li><a href="glossary.html" aria-current="page">Glossary</a></li>
+          <li><a href="resources.html">Resources &amp; Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>Networking Glossary</h1>
+    <p class="lead">Key terms in plain language.</p>
+    <label for="filter">Filter terms</label>
+    <input class="search" type="search" id="filter" placeholder="Type a term, e.g. router" aria-controls="terms">
+    <p id="count" role="status" aria-live="polite"></p>
+
+    <dl class="glossary" id="terms">
+      <div class="entry"><dt>Bandwidth</dt><dd>The maximum amount of data that can be sent over a connection in a given time, usually measured in Mbps or Gbps.</dd></div>
+      <div class="entry"><dt>DHCP</dt><dd>Dynamic Host Configuration Protocol. Automatically assigns IP addresses to devices when they join a network.</dd></div>
+      <div class="entry"><dt>DNS</dt><dd>Domain Name System. Translates human-friendly names like example.com into IP addresses.</dd></div>
+      <div class="entry"><dt>Ethernet</dt><dd>The most common wired networking standard for local area networks.</dd></div>
+      <div class="entry"><dt>Firewall</dt><dd>Hardware or software that allows or blocks network traffic based on security rules.</dd></div>
+      <div class="entry"><dt>Gateway</dt><dd>A device, usually a router, that connects a local network to other networks such as the internet.</dd></div>
+      <div class="entry"><dt>HTTP / HTTPS</dt><dd>The protocols used to load web pages. HTTPS adds encryption to protect the data.</dd></div>
+      <div class="entry"><dt>IP Address</dt><dd>A numeric label that identifies a device on a network.</dd></div>
+      <div class="entry"><dt>LAN</dt><dd>Local Area Network. A network that covers a small area such as a home, school, or office.</dd></div>
+      <div class="entry"><dt>Latency</dt><dd>The delay between sending data and it arriving. Lower is better.</dd></div>
+      <div class="entry"><dt>MAC Address</dt><dd>A unique hardware identifier assigned to a network interface. Used by switches at Layer 2.</dd></div>
+      <div class="entry"><dt>NAT</dt><dd>Network Address Translation. Lets many private devices share one public IP address.</dd></div>
+      <div class="entry"><dt>Packet</dt><dd>A small unit of data sent across a network, containing a header and a payload.</dd></div>
+      <div class="entry"><dt>Port</dt><dd>A number that identifies a specific service on a device (e.g., 80 for HTTP, 443 for HTTPS).</dd></div>
+      <div class="entry"><dt>Protocol</dt><dd>A set of rules that define how devices communicate.</dd></div>
+      <div class="entry"><dt>Router</dt><dd>A device that forwards data between different networks.</dd></div>
+      <div class="entry"><dt>Subnet</dt><dd>A smaller network created by dividing a larger one, which improves organization and security.</dd></div>
+      <div class="entry"><dt>Switch</dt><dd>A device that connects devices on the same network and forwards data using MAC addresses.</dd></div>
+      <div class="entry"><dt>TCP</dt><dd>Transmission Control Protocol. Provides reliable, ordered delivery of data.</dd></div>
+      <div class="entry"><dt>UDP</dt><dd>User Datagram Protocol. A faster but less reliable protocol, used for streaming and gaming.</dd></div>
+      <div class="entry"><dt>VPN</dt><dd>Virtual Private Network. Creates an encrypted tunnel for your traffic over an untrusted network.</dd></div>
+      <div class="entry"><dt>WAN</dt><dd>Wide Area Network. A network spanning a large area; the internet is the largest WAN.</dd></div>
+      <div class="entry"><dt>Wi-Fi</dt><dd>Wireless networking technology that connects devices to a network using radio waves.</dd></div>
+    </dl>
+  </main>
+
+  <footer>
+    <p>NetLearn · Capstone Project 2026 · Created by Rahman Bamgbose</p>
+  </footer>
+
+  <script>
+    const input = document.getElementById('filter');
+    const entries = document.querySelectorAll('.entry');
+    const count = document.getElementById('count');
+    function update() {
+      const q = input.value.trim().toLowerCase();
+      let shown = 0;
+      entries.forEach(e => {
+        const match = e.textContent.toLowerCase().includes(q);
+        e.hidden = !match;
+        if (match) shown++;
+      });
+      count.textContent = q ? shown + ' term' + (shown === 1 ? '' : 's') + ' found' : '';
+    }
+    input.addEventListener('input', update);
+  </script>
+</body>
+</html>

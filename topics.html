@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Beginner-friendly lessons on IP addressing, the OSI model, network hardware, and network security.">
+  <title>Topics – NetLearn</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Net<span>Learn</span></a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="topics.html" aria-current="page">Topics</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="resources.html">Resources &amp; Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>Networking Topics</h1>
+    <p class="lead">Four core subjects, explained step by step.</p>
+    <nav aria-label="On this page">
+      <ul class="toc">
+        <li><a href="#ip-addressing">IP Addressing</a></li>
+        <li><a href="#osi-model">OSI Model</a></li>
+        <li><a href="#hardware">Network Hardware</a></li>
+        <li><a href="#security">Network Security</a></li>
+      </ul>
+    </nav>
+
+    <!-- IP ADDRESSING -->
+    <article class="topic" id="ip-addressing">
+      <h2>IP Addressing</h2>
+      <p>An <strong>IP address</strong> is a unique label that identifies a device on a network, like a street address for your computer. Data needs both a source and a destination address to find its way.</p>
+      <h3>IPv4 vs. IPv6</h3>
+      <table>
+        <caption>Comparison of IPv4 and IPv6</caption>
+        <thead><tr><th scope="col">Feature</th><th scope="col">IPv4</th><th scope="col">IPv6</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Length</th><td>32 bits</td><td>128 bits</td></tr>
+          <tr><th scope="row">Format</th><td>Four decimal numbers (192.168.1.10)</td><td>Eight hex groups (2001:db8::1)</td></tr>
+          <tr><th scope="row">Address space</th><td>About 4.3 billion</td><td>Practically unlimited</td></tr>
+        </tbody>
+      </table>
+      <figure>
+        <svg viewBox="0 0 640 120" role="img" aria-labelledby="ip-t ip-d">
+          <title id="ip-t">Anatomy of an IPv4 address</title>
+          <desc id="ip-d">The address 192.168.1.10 split into four octets. The first three octets, 192.168.1, are the network portion and the last octet, 10, is the host portion.</desc>
+          <g font-size="28" font-weight="700" text-anchor="middle" fill="#e8eefb">
+            <rect x="20" y="20" width="130" height="60" rx="10" fill="#1a3a6a" stroke="#5aa9ff" stroke-width="3"/><text x="85" y="60">192</text>
+            <rect x="165" y="20" width="130" height="60" rx="10" fill="#1a3a6a" stroke="#5aa9ff" stroke-width="3"/><text x="230" y="60">168</text>
+            <rect x="310" y="20" width="130" height="60" rx="10" fill="#1a3a6a" stroke="#5aa9ff" stroke-width="3"/><text x="375" y="60">1</text>
+            <rect x="455" y="20" width="130" height="60" rx="10" fill="#0f3a30" stroke="#38e0b0" stroke-width="3"/><text x="520" y="60">10</text>
+          </g>
+          <g font-size="14" text-anchor="middle" fill="#b3c0da">
+            <text x="230" y="105">Network portion</text>
+            <text x="520" y="105">Host portion</text>
+          </g>
+        </svg>
+        <figcaption>192.168.1.10: the first three octets identify the network, the last identifies the device.</figcaption>
+      </figure>
+      <h3>Public vs. Private Addresses</h3>
+      <p>Home and office networks use <strong>private</strong> ranges (like 192.168.x.x and 10.x.x.x) that aren't routable on the internet. Your router uses <strong>NAT</strong> to share a single public address among all of your devices.</p>
+      <div class="callout"><strong>Exam tip:</strong> Know the private ranges: 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16.</div>
+    </article>
+
+    <!-- OSI MODEL -->
+    <article class="topic" id="osi-model">
+      <h2>The OSI Model</h2>
+      <p>The <strong>Open Systems Interconnection (OSI)</strong> model splits network communication into seven layers. Each layer has one job and talks to the layers directly above and below it. This makes troubleshooting easier: find the layer where the problem lives.</p>
+      <figure>
+        <svg viewBox="0 0 640 330" role="img" aria-labelledby="osi-t osi-d">
+          <title id="osi-t">The seven OSI layers</title>
+          <desc id="osi-d">A stack of seven layers from top to bottom: 7 Application, 6 Presentation, 5 Session, 4 Transport, 3 Network, 2 Data Link, 1 Physical.</desc>
+          <g font-size="17" font-weight="700" fill="#e8eefb">
+            <rect x="20" y="10" width="600" height="38" rx="8" fill="#1a3a6a"/><text x="40" y="35">7 · Application: apps and user services (HTTP, DNS)</text>
+            <rect x="20" y="52" width="600" height="38" rx="8" fill="#1d4378"/><text x="40" y="77">6 · Presentation: formatting, encryption, compression</text>
+            <rect x="20" y="94" width="600" height="38" rx="8" fill="#20507f"/><text x="40" y="119">5 · Session: opens, manages, and closes connections</text>
+            <rect x="20" y="136" width="600" height="38" rx="8" fill="#1b5e6b"/><text x="40" y="161">4 · Transport: reliable delivery (TCP, UDP)</text>
+            <rect x="20" y="178" width="600" height="38" rx="8" fill="#146a63"/><text x="40" y="203">3 · Network: logical addressing and routing (IP)</text>
+            <rect x="20" y="220" width="600" height="38" rx="8" fill="#0f7458"/><text x="40" y="245">2 · Data Link: MAC addresses, switching (Ethernet)</text>
+            <rect x="20" y="262" width="600" height="38" rx="8" fill="#0b7d4f"/><text x="40" y="287">1 · Physical: cables, signals, bits</text>
+          </g>
+        </svg>
+        <figcaption>Data moves down the stack when sending and up the stack when receiving.</figcaption>
+      </figure>
+      <div class="callout"><strong>Memory trick:</strong> From layer 7 to 1: <em>All People Seem To Need Data Processing.</em></div>
+    </article>
+
+    <!-- HARDWARE -->
+    <article class="topic" id="hardware">
+      <h2>Network Hardware</h2>
+      <table>
+        <caption>Common network devices</caption>
+        <thead><tr><th scope="col">Device</th><th scope="col">OSI layer</th><th scope="col">What it does</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Hub</th><td>1</td><td>Repeats every signal to all ports. Largely obsolete.</td></tr>
+          <tr><th scope="row">Switch</th><td>2</td><td>Forwards frames to the correct port using MAC addresses.</td></tr>
+          <tr><th scope="row">Router</th><td>3</td><td>Connects different networks and chooses the best path using IP addresses.</td></tr>
+          <tr><th scope="row">Access point</th><td>1–2</td><td>Lets wireless devices join a wired network.</td></tr>
+          <tr><th scope="row">Firewall</th><td>3–7</td><td>Allows or blocks traffic based on rules.</td></tr>
+        </tbody>
+      </table>
+      <p>In a typical home, one box combines a router, a switch, an access point, and a basic firewall.</p>
+      <div class="callout"><strong>Key difference:</strong> A switch connects devices <em>within</em> a network. A router connects <em>different</em> networks together.</div>
+    </article>
+
+    <!-- SECURITY -->
+    <article class="topic" id="security">
+      <h2>Network Security Basics</h2>
+      <p>Network security protects data and devices from unauthorized access. Start with these fundamentals:</p>
+      <div class="grid">
+        <div class="card"><h3>Firewalls</h3><p>Filter traffic by rules so only wanted connections get through.</p></div>
+        <div class="card"><h3>Encryption</h3><p>Scrambles data so eavesdroppers can't read it. Use WPA3 or WPA2 on Wi-Fi and HTTPS on the web.</p></div>
+        <div class="card"><h3>Strong Passwords</h3><p>Change default router logins and use long, unique passphrases.</p></div>
+        <div class="card"><h3>Updates</h3><p>Install firmware and software patches to close known vulnerabilities.</p></div>
+        <div class="card"><h3>Segmentation</h3><p>Separate guest and IoT devices from your main network.</p></div>
+        <div class="card"><h3>VPNs</h3><p>Create an encrypted tunnel across untrusted networks like public Wi-Fi.</p></div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>NetLearn · Capstone Project 2026 · Created by Rahman Bamgbose</p>
+  </footer>
+</body>
+</html>
